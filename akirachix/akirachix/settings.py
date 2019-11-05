@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,7 +44,8 @@ INSTALLED_APPS = [
     'teacher',
     'course',
     'crispy_forms',
-    'rest_framework'
+    'rest_framework',
+    'core',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -129,5 +131,6 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'student/media')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'teacher/media')
+LOGIN_REDIRECT_URL="/"
 
 django_heroku.settings(locals())

@@ -1,1 +1,1 @@
-web: gunicorn akirachix.wsgi --log-file-
+web: gunicorn akirachix.wsgi --log-file -

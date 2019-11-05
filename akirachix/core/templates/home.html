@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Registration</title>
+</head>
+
+
+<body>
+	
+	<div class = "zoya">
+
+		<style>
+		body{
+			background-color: black;
+		}
+		
+			.zoya{
+				font-size: 20px;
+				color: black;
+				width: 800px;
+				height: 400px;
+				margin-top: 50px;
+				padding-left: 20px;
+				background-color: white;
+				margin: 0 auto;
+			}
+		</style>
+
+		<style>
+			h1{
+				color: purple;
+				font-size: 40px;
+				padding-left: 40px;
+			}
+		</style> 
+
+		<h1 style="font-family: Alleyster">Student Registration Form</h1> 
+		
+	{% if user.is_authenticated %}
+		<h2>Welcome {{user.username}}</h2>
+		Add a student
+		<a href="/student/add/">Here</a>
+		<br>
+		Logout<a href="/accounts/Logout"/>here</a><br>
+		 you are logged in
+	
+	{% else %}
+		<h1>Hello guest</h1>
+		 you can log in
+		 <a href="/accounts/login/">here</a>
+		 or create an account
+		 <a href="/accounts/register/">here</a>
+	
+	{% endif %}
+</div>
+</body>
+</html>
